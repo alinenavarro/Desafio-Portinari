@@ -15,9 +15,8 @@
 import { FormsModule } from  '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AutofocusModule } from 'angular-autofocus-fix';
-import { TasksComponent } from './components/tasks/tasks.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TaskComponent } from './components/task/task.component';
+import { TasksComponent } from './tasks/tasks.component';
 import { PoModule } from '@portinari/portinari-ui';
 import { LoginComponent } from './login/login.component';
 
@@ -31,10 +30,10 @@ const routes: Routes = [
   //     canActivateChild: [CursosGuard],
   //     canLoad: [AuthGuard]
   // },
-  { path: 'tasks', component: TasksComponent },
+  //{ path: 'tasks', component: TasksComponent },
   //{ path: 'curso/:id', component: CursoDetalheComponent },
   { path: 'login', component: LoginComponent },
-  { path: '', component: TasksComponent } //alterar para login
+  { path: '', component: TasksComponent } //alterar para login, apagar import de tasks e retirar de tasksrotutingmodule
  
   // { path: 'tasks', component: TasksComponent,
   //     canActivate: [AuthGuard] 

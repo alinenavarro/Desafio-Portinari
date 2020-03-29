@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Task } from '../../interfaces/Task';
+import { Task } from 'src/app/interfaces/Task';
 import { trigger, transition, style, animate } from '@angular/animations';
-import { TaskService } from 'src/app/services/task.service';
+import { TaskService } from 'src/app/tasks/task.service';
 
 
 @Component({

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Task } from '../interfaces/Task';
+//import { Task } from '../interfaces/Task';
+import { Task } from 'src/app/interfaces/Task';
 //import { environment } from 'src/environments/environment';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError} from 'rxjs/operators';
