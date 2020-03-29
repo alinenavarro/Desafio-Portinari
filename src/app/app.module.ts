@@ -10,6 +10,7 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TaskComponent } from './components/task/task.component';
 import { PoModule } from '@portinari/portinari-ui';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { PoModule } from '@portinari/portinari-ui';
     AppComponent,
     TasksComponent,
     TaskComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
