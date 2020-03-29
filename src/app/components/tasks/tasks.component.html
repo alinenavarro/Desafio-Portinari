@@ -1,0 +1,49 @@
+<input type="text" class="todo-input" placeholder="O que precisa ser feito"  [(ngModel)]="taskTitle" (keyup.enter)="addTask()">
+
+<app-task 
+  *ngFor="let task of taskService.tasksFiltered()" 
+  [task]="task"
+
+  >
+</app-task>
+
+<!-- <div class="extra-container">
+    <div><label><input type="checkbox" (change)
+      ="taskService.checkAllTasks()" [(ngModel)]
+      ="!taskService.anyRemainingModel"> Marcar/Desmarcar Tudo</label></div>
+    <div> {{ taskService.remaining() }} tarefas restantes</div>
+</div> -->
+
+
+
+
+
+<!-- <div class="extra-container">
+    <div>
+      <button [ngClass]="{'active': taskService.filter == 'all'}" (click)="taskService.filter='all'">Todas</button>
+      <button [ngClass]="{'active': taskService.filter == 'active'}" (click)="taskService.filter='active'">Pendentes</button>
+      <button [ngClass]="{'active': taskService.filter == 'completed'}" (click)="taskService.filter='completed'">Concluídas</button>
+    </div> -->
+
+    <div class="extra-container">
+    <div>
+
+      <po-button
+      [ngClass]="{'active': taskService.filter == 'all'}"
+      (p-click)="taskService.filter='all'"
+      p-label="Todas"
+      p-type="link"
+    >
+    </po-button>
+  
+
+
+
+
+
+
+    <!-- <div *ngIf="taskService.atLeastOneCompleted()" >
+        <button (click)="taskService.clearCompleted()">Excluir Concluídas</button>
+    </div> -->
+</div>
+    

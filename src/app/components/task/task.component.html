@@ -1,0 +1,12 @@
+ <div class="todo-item">
+  <div class="todo-item-left">
+    <input type="checkbox" [(ngModel)]="task.completed" (change)="taskService.doneEdit(task)">
+    <div *ngIf="!task.editing; else editingTask" class="todo-item-label" [ngClass]="{ 'completed' : task.completed }" (dblclick)="taskService.editTask(task)">{{ task.title }}</div> 
+    <ng-template #editingTask>
+      <input type="text" class="todo-item-edit" [(ngModel)]="task.title" (blur)="taskService.doneEdit(task)" (keyup.enter)="taskService.doneEdit(task)" (keyup.esc)="taskService.cancelEdit(task)" autofocus > 
+    </ng-template>
+  </div>
+  <div class="remove-item" (click)="taskService.deleteTask(task.id)">
+    &times;
+  </div>
+</div> 

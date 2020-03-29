@@ -1,0 +1,46 @@
+
+GET http://localhost:3000/tasks
+
+
+###
+
+GET http://localhost:3000/tasks/1 HTTP/1.1
+content-type: application/json
+
+  {
+    "title": "Tarefa 1 usuário 1 - editada",
+    "completed": true,
+    "editing": false
+  }
+
+###
+
+DELETE http://localhost:3000/tasks/3 HTTP/1.1
+content-type: application/json
+
+  {
+    "title": "Tarefa 3 usuário 1 - editada",
+    "completed": true,
+    "editing": false
+  }
+###
+
+PUT http://localhost:3000/tasks/1 HTTP/1.1
+content-type: application/json
+
+  {
+    "title": "Tarefa 1 usuário 1 - editada",
+    "completed": true,
+    "editing": false
+  }
+
+###
+
+POST http://localhost:3000/tasks/ HTTP/1.1
+content-type: application/json
+
+  {
+    "title": "Tarefa 3 usuário 1",
+    "completed": true,
+    "editing": false
+  }

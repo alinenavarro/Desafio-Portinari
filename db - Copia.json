@@ -1,0 +1,126 @@
+    {
+      "users": [
+        {
+          "id": 1,
+          "email": "user@teste.com.br",
+          "password": "1234"
+        },
+        {
+          "id": 2,
+          "email": "aline.navarro@teste.com.br",
+          "password": "12345"
+        }
+      ],
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Tarefa 1 usuário 1",
+          "completed": true,
+          "editing": false
+        },
+        {
+          "id": 70,
+          "userId": 1,
+          "title": "Tarefa 1 usuário 1",
+          "detail": "Detalhe tarefa 1 usuário 1",
+          "status": "completed",
+          "completed": true,
+          "editing": false,
+          "startdate": "2020-02-07",
+          "deadline": "2020-06-29",
+          "category": "Pessoal",
+          "finisheddate": "2020-03-01",
+          "finishednote": "Realizada antes da data prevista." 
+        },
+        {
+          "id": 2,
+          "userId": 1,
+          "title": "Tarefa 2 usuário 1",
+          "detail": "Detalhe tarefa 2 usuário 1",
+          "status": "completed",
+          "startdate": "2020-02-25",
+          "deadline": "2020-04-14",
+          "category": "Trabalho",
+          "finisheddate": "2020-03-10",
+          "finishednote": "Realizada." 
+        },
+        {
+          "id": 3,
+          "userId": 1,
+          "title": "Tarefa 3 usuário 1",
+          "detail": "Detalhe tarefa 3 usuário 1",
+          "status": "active",
+          "startdate": "2020-02-05",
+          "deadline": "2020-06-28",
+          "category": "Pessoal"
+        },
+        {
+          "id": 4,
+          "userId": 2,
+          "title": "Tarefa 4 usuário 1",
+          "detail": "Detalhe tarefa 4 usuário 1",
+          "status": "active",
+          "startdate": "2020-02-05",
+          "deadline": "2020-06-28",
+          "category": "Pessoal"
+        },
+        {
+          "id": 5,
+          "userId": 1,
+          "title": "Tarefa 5 usuário 1",
+          "detail": "Detalhe tarefa 5 usuário 1",
+          "status": "active",
+          "startdate": "2020-02-05",
+          "deadline": "2020-06-28",
+          "category": "Trabalho"
+        },
+        {
+          "id": 6,
+          "userId": 2,
+          "title": "Tarefa 1 usuário 2",
+          "detail": "Detalhe tarefa 1 usuário 2",
+          "status": "active",
+          "startdate": "2020-02-05",
+          "deadline": "2020-06-28",
+          "category": "Pessoal"
+        },
+        {
+          "id": 7,
+          "userId": 2,
+          "title": "Tarefa usuário 2. 123",
+          "detail": "Detalhe tarefa usuário 2. 123",
+          "status": "completed",
+          "startdate": "2020-02-24",
+          "deadline": "2020-04-13",
+          "category": "Trabalho",
+          "finisheddate": "2020-03-12",
+          "finishednote": "Finalizada." 
+        },
+        {
+          "id": 8,
+          "userId": 2,
+          "title": "Tarefa usuário 2. 321",
+          "detail": "Detalhe tarefa usuário 2. 321",
+          "status": "active",
+          "startdate": "2020-02-24",
+          "deadline": "2020-04-13",
+          "category": "Trabalho"
+        }
+        
+      ],
+      "categories": [
+        {
+          "id": 1,
+          "category": "Pessoal"
+        },
+        {
+          "id": 2,
+          "category": "Trabalho"
+        },
+        {
+          "id": 3,
+          "category": "Diversos"
+        }
+      ]
+     
+    }
