@@ -7,7 +7,6 @@ import { TasksComponent } from './tasks.component';
 const tasksRoutes: Routes = [
 
  { path: 'tasks', component: TasksComponent },
- { path: '', component: TasksComponent } //alterar para login
  // { path: 'tasks', component: TasksComponent,
  //     canActivate: [AuthGuard] 
  // }

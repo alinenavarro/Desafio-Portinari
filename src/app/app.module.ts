@@ -10,8 +10,11 @@ import { AppComponent } from './app.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { TaskComponent } from './tasks/task/task.component';
 // import { PoModule } from '@portinari/portinari-ui';
-import { LoginComponent } from './login/login.component';
+//import { LoginComponent } from './login/login.component';
+
 import { TasksModule } from './tasks/tasks.module';
+import { AuthService } from './login/auth.service';
+import { LoginModule } from './login/login.module';
 
 
 @NgModule({
@@ -19,11 +22,12 @@ import { TasksModule } from './tasks/tasks.module';
     AppComponent,
     // TasksComponent,
     // TaskComponent,
-    LoginComponent,
+    //LoginComponent,
   ],
   imports: [
     BrowserModule,
     TasksModule,
+    LoginModule,
     AppRoutingModule
     // FormsModule,
     // HttpClientModule,
@@ -32,7 +36,9 @@ import { TasksModule } from './tasks/tasks.module';
     // PoModule
     
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
