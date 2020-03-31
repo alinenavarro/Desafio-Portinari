@@ -1,56 +1,80 @@
-<input type="text" class="todo-input" placeholder="Nova tarefa"  [(ngModel)]="taskTitle" (keyup.enter)="addTask()">
+<div class="po-wrapper">
+ 
+  <po-toolbar p-title="Tarefas"></po-toolbar>
+  <po-menu [p-menus]="menus"></po-menu>
 
-<app-task 
-  *ngFor="let task of taskService.tasksFiltered()" 
-  [task]="task"
+  <po-page-default >
+
+  <!-- <po-input
+  (p-change)="addTask()"
+  (p-enter)="addTask()"
+  p-help="Nova Tarefa"
+  [(ngModel)]="taskTitle"
+  >
+  </po-input> -->
+
+  <!-- <po-datepicker
+  name="datepicker"
+  p-label="Prazo"
+  >
+  </po-datepicker> -->
+
+  <input type="text" class="todo-input" placeholder="Nova tarefa"  [(ngModel)]="taskTitle" (keyup.enter)="addTask()">
+
+  <app-task 
+    *ngFor="let task of taskService.tasksFiltered()" 
+   [task]="task"
 
   >
-</app-task>
+  </app-task>
 
-<!-- <div class="extra-container">
-    <div><label><input type="checkbox" (change)
-      ="taskService.checkAllTasks()" [(ngModel)]
-      ="!taskService.anyRemainingModel"> Marcar/Desmarcar Tudo</label></div>
-    <div> {{ taskService.remaining() }} tarefas restantes</div>
-</div> -->
+  <!-- <div class="extra-container">
+      <div><label><input type="checkbox" (change)
+        ="taskService.checkAllTasks()" [(ngModel)]
+        ="!taskService.anyRemainingModel"> Marcar/Desmarcar Tudo</label></div>
+      <div> {{ taskService.remaining() }} tarefas restantes</div>
+  </div> -->
 
-<!-- <div class="extra-container">
+  <!-- <div class="extra-container">
+      <div>
+        <button [ngClass]="{'active': taskService.filter == 'all'}" (click)="taskService.filter='all'">Todas</button>
+        <button [ngClass]="{'active': taskService.filter == 'active'}" (click)="taskService.filter='active'">Pendentes</button>
+        <button [ngClass]="{'active': taskService.filter == 'completed'}" (click)="taskService.filter='completed'">Concluídas</button>
+      </div> -->
+
+  <!-- <po-divider>
+  </po-divider> -->
+  <div class="extra-container">
     <div>
-      <button [ngClass]="{'active': taskService.filter == 'all'}" (click)="taskService.filter='all'">Todas</button>
-      <button [ngClass]="{'active': taskService.filter == 'active'}" (click)="taskService.filter='active'">Pendentes</button>
-      <button [ngClass]="{'active': taskService.filter == 'completed'}" (click)="taskService.filter='completed'">Concluídas</button>
-    </div> -->
+    <po-button
+        [ngClass]="{'active': taskService.filter == 'all'}"
+        (p-click)="taskService.filter='all'"
+        p-label="Todas"
+        p-type="link"
+    >
+    </po-button>
+    <po-button
+    [ngClass]="{'active': taskService.filter == 'active'}"
+    (p-click)="taskService.filter='active'"
+    p-label="Pendentes"
+    p-type="link"
+    >
+    </po-button>
 
- <div class="extra-container">
-  <div>
-  <po-button
-      [ngClass]="{'active': taskService.filter == 'all'}"
-      (p-click)="taskService.filter='all'"
-      p-label="Todas"
-      p-type="link"
-  >
-  </po-button>
-  <po-button
-  [ngClass]="{'active': taskService.filter == 'active'}"
-  (p-click)="taskService.filter='active'"
-  p-label="Pendentes"
-  p-type="link"
-  >
-  </po-button>
+    <po-button
+    [ngClass]="{'active': taskService.filter == 'completed'}"
+    (p-click)="taskService.filter='completed'"
+    p-label="Concluídas"
+    p-type="link"
+    >
+    </po-button>
 
-  <po-button
-  [ngClass]="{'active': taskService.filter == 'completed'}"
-  (p-click)="taskService.filter='completed'"
-  p-label="Concluídas"
-  p-type="link"
-  >
-  </po-button>
-
-</div>
-
+    </div>
+  </div>
 
     <!-- <div *ngIf="taskService.atLeastOneCompleted()" >
         <button (click)="taskService.clearCompleted()">Excluir Concluídas</button>
     </div> 
 </div>-->
-    
+</po-page-default>
+</div>  

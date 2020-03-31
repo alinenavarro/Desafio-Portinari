@@ -5,9 +5,15 @@
   }
   
   .container {
+    max-width: 1200px;
+    margin-right: 0 auto;
+    
+  }
+
+  /* .container {
     max-width: 600px;
     margin: 0 auto;
-  }
+  } */
   
   
   body {
@@ -19,8 +25,3 @@
     font-size: 24px;
   }
   
-  .logo {
-    display: block;
-    margin: 20px auto;
-    height: 75px;
-  }
