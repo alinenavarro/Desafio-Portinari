@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-//import { RouterModule } from '@angular/router';
 import { TaskComponent } from './task/task.component';
 import { TasksComponent } from './tasks.component';
 import { TaskService } from './task.service';
@@ -20,7 +19,6 @@ import { TasksRoutingModule } from './tasks.routing.module';
   ],
   imports: [
     CommonModule,
-    //RouterModule,
     TasksRoutingModule,
     FormsModule,
     HttpClientModule,

@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import { AuthService } from './auth.service';
 import { User } from './user';
-//import { PoPageLoginModule } from '@portinari/portinari-ui'
-//import { PoPageLogin } from '@portinari/portinari-ui'
 
 @Component({
   selector: 'app-login',
@@ -20,11 +17,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(PoPageLogin) {
-    //console.log(this.user)
-    //this.user.user = PoPageLogin.login
-    //this.user.password = PoPageLogin.password
     this.authService.login(PoPageLogin);
-
   }
 
 }

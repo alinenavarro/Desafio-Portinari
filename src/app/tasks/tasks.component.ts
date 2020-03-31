@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Task } from 'src/app/interfaces/Task';
 import { trigger, transition, style, animate } from '@angular/animations';
 import { TaskService } from 'src/app/tasks/task.service';
 import { PoMenuItem } from '@portinari/portinari-ui';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-tasks',
@@ -28,7 +26,7 @@ import { Router } from '@angular/router';
 export class TasksComponent implements OnInit {
 
   readonly menus: Array<PoMenuItem> = [
-    { label: 'Logout' , action: this.onClick.bind(this), icon: 'po-icon-home', shortLabel: 'Início' },
+    { label: 'LogOut' , action: this.onClick.bind(this), icon: 'po-icon-home', shortLabel: 'LogOut' },
   ];
 
   taskTitle: string;
@@ -47,7 +45,7 @@ export class TasksComponent implements OnInit {
   
       this.taskService.addTask(this.taskTitle);
       this.taskTitle = '';
-    // this.idForTask++;
+ 
   }
 
   private onClick() {

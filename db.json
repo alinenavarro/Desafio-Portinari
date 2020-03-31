@@ -6,19 +6,29 @@
       "id": 6
     },
     {
-      "title": "Aprovar mudanças.",
-      "completed": false,
-      "id": 8
-    },
-    {
       "title": "Realizar teste unitário.",
       "completed": true,
       "id": 9
     },
     {
       "title": "Atingir backlog aceitável.",
-      "completed": false,
+      "completed": true,
       "id": 10
+    },
+    {
+      "title": "Aumentar cobertura de automação.",
+      "completed": false,
+      "id": 11
+    },
+    {
+      "title": "Realizar status report.",
+      "completed": false,
+      "id": 12
+    },
+    {
+      "title": "teste",
+      "completed": false,
+      "id": 13
     }
   ]
 }

@@ -1,12 +1,9 @@
 import { Injectable } from '@angular/core';
-//import { Task } from '../interfaces/Task';
 import { Task } from 'src/app/interfaces/Task';
-//import { environment } from 'src/environments/environment';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError} from 'rxjs/operators';
 import { throwError as observableThrowError } from 'rxjs';
 
-//const API_URL = environment.apiUrl;
 const API_URL = 'http://localhost:3000'
 
 @Injectable({
@@ -62,9 +59,11 @@ export class TaskService {
     this.idForTask++;
   }
 
-  editTask(task: Task): void {
+   editTask(task: Task): void {
     this.beforeEditCache = task.title;   
-    task.editing = true;
+    if (!task.completed) {
+     task.editing = true;
+    }
   }
 
   doneEdit(task: Task): void {
@@ -105,36 +104,6 @@ export class TaskService {
     return this.tasks.filter(task => task.completed).length > 0;
   }
 
-  //clearCompleted(): void {
-    // const completed = this.tasks
-    // .filter(task => task.completed)
-    // .map(task => task.id)
-
-    // // this.http.request('delete',API_URL + '/tasksDeletedCompleted/',{
-    //  this.http.request('delete',API_URL + '/tasks/',{  
-    //  body: {
-    //      tasks: completed
-    //    }
-    // })
-    // .subscribe((response: any) => {
-    //   this.tasks = this.tasks.filter(task => !task.completed);
-    // }) 
-   //}
-
-  // checkAllTasks(): void {
-
-  //   const checkedTask = (<HTMLInputElement>event.target).checked;
-
-  //   // this.http.patch(API_URL + '/tasksCheckAll', {
-  //     this.http.patch(API_URL + '/tasks', {
-  //     completed: checkedTask
-  //   })
-  //     .subscribe((response: any) => {
-  //       this.tasks.forEach(task => task.completed = checkedTask)
-  //       this.anyRemainingModel = this.anyRemaining();
-  //     }) 
-  // }
-
   anyRemaining(): boolean {
     return this.remaining() !== 0;
   }
@@ -150,4 +119,5 @@ export class TaskService {
 
     return this.tasks;
   }
+
 }
